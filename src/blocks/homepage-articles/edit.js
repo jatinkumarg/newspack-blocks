@@ -180,7 +180,7 @@ class Edit extends Component {
 							onChange={ () => setAttributes( { showImage: ! showImage } ) }
 						/>
 					</PanelRow>
-					{ showImage && mediaPosition !== 'top' && (
+					{ showImage && mediaPosition !== 'top' && mediaPosition !== 'behind' && (
 						<RangeControl
 							className="image-scale-slider"
 							label={ __( 'Featured Image Scale' ) }
