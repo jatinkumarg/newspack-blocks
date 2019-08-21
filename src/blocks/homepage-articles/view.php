@@ -58,6 +58,9 @@ function newspack_blocks_render_block_homepage_articles( $attributes ) {
 	if ( $attributes['showImage'] && isset( $attributes['imageScale'] ) ) {
 		$classes .= ' image-scale' . $attributes['imageScale'];
 	}
+	if ( $attributes['showImage'] && isset( $attributes['topPadding'] ) && 'behind' === $attributes['mediaPosition'] ) {
+		$classes .= ' top-padding' . $attributes['topPadding'];
+	}
 	if ( isset( $attributes['className'] ) ) {
 		$classes .= ' ' . $attributes['className'];
 	}
@@ -237,6 +240,10 @@ function newspack_blocks_register_homepage_articles() {
 				'imageScale'    => array(
 					'type'    => 'integer',
 					'default' => 3,
+				),
+				'topPadding'    => array(
+					'type'    => 'integer',
+					'default' => 10,
 				),
 				'sectionHeader' => array(
 					'type'    => 'string',
