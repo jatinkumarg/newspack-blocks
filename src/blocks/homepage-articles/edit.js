@@ -309,7 +309,7 @@ class Edit extends Component {
 			[ `type-scale${ typeScale }` ]: typeScale !== '5',
 			[ `image-align${ mediaPosition }` ]: showImage,
 			[ `image-scale${ imageScale }` ]: imageScale !== '1' && showImage,
-			'has-text-color': textColor,
+			'has-text-color': textColor.color !== '',
 			'show-caption': showCaption,
 		} );
 
